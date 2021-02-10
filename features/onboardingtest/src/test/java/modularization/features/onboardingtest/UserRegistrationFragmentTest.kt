@@ -3,7 +3,9 @@ package modularization.features.onboardingtest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-
+/**
+ * @author Anand M Joseph (anandmampuzhakal@hotmail.com)
+ */
 class UserRegistrationFragmentTest {
 
     lateinit var userRegistrationFragment :UserRegistrationFragment
