@@ -18,7 +18,7 @@ class DashboardFlowTest {
     @Test
     fun dashboardFlowTest() {
 
-        onView(withId(R.id.action_albums)).perform(click())
+        onView(withId(R.id.action_about_me)).perform(click())
         onView(withId(R.id.action_sharing)).perform(click())
 
         onView(withId(R.id.button_social_facebook)).check(matches(isDisplayed()))

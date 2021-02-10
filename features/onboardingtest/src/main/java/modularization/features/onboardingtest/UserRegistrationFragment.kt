@@ -69,7 +69,7 @@ class UserRegistrationFragment : Fragment() {
 
         amountEditText = view.findViewById<EditText>(R.id.amount)
         userName = view.findViewById<EditText>(R.id.username)
-        setTextWatcher(amountEditText)
+        setTextWatcher()
         view.findViewById<Button>(R.id.button_register).setOnClickListener {
             if(userName.text.isNotEmpty() && amountEditText.text.toString().isNotEmpty()) {
                 activity?.intent?.putExtra("userName", userName.text.toString())
@@ -84,14 +84,13 @@ class UserRegistrationFragment : Fragment() {
     }
 
 
-    private fun setTextWatcher(view: View) {
+    private fun setTextWatcher() {
         amountEditText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
             }
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }
             override fun onTextChanged(amount: CharSequence, start: Int, before: Int, count: Int) {
-
                 numberToWords = processingInputNumber(amount.toString())
             }
         })
