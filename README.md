@@ -27,4 +27,4 @@ Note that all code runs and executes, but the screens only contain data in xml p
 
 ## Flow test for capture a person’s detail. 
 
-![Welcome unit test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/userregistartionflowtest.webm)
+![Welcome FlowTest test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/howtorunflow.png)
