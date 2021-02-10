@@ -24,9 +24,9 @@ object Versions {
     //</editor-fold>
 
     // <editor-fold desc="tools">
-    const val gradleandroid = "3.5.0"
+    const val gradle_android = "3.5.0"
     const val kotlin = "1.3.20"
-    const val gradleversions = "0.21.0"
+    const val gradle_versions = "0.21.0"
     // </editor-fold>
 
 }
@@ -45,9 +45,9 @@ object Deps {
     const val test_androidx_runner = "androidx.test:runner:${Versions.androidx_testing}"
     const val test_androidx_espresso_core = "androidx.test.espresso:espresso-core:${Versions.androidx_espresso}"
 
-    const val tools_gradle_android = "com.android.tools.build:gradle:${Versions.gradleandroid}"
+    const val tools_gradle_android = "com.android.tools.build:gradle:${Versions.gradle_android}"
     const val tools_kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-    const val tools_gradle_versions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleversions}"
+    const val tools_gradle_versions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradle_versions}"
 
 }
 

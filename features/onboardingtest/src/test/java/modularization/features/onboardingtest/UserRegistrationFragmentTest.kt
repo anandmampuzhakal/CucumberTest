@@ -8,7 +8,7 @@ import org.junit.Test
  */
 class UserRegistrationFragmentTest {
 
-    lateinit var userRegistrationFragment :UserRegistrationFragment
+    private lateinit var userRegistrationFragment :UserRegistrationFragment
       @Before
     fun setUp() {
         userRegistrationFragment = UserRegistrationFragment()
@@ -17,18 +17,18 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheSingleDigitToWords() {
         //given
-         var amount = 1
+         val amount = 1
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
          Assert.assertEquals(result,"One dollar")
     }
     @Test
     fun testTheSingleDigitGreaterOneToWords() {
         //given
-        var amount = 3
+        val amount = 3
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Three dollars")
     }
@@ -36,9 +36,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheDoubleDigitsToWords() {
         //given
-        var amount = 11
+        val amount = 11
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Eleven dollars")
     }
@@ -46,9 +46,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheDoubleDigitsMaxToWords() {
         //given
-        var amount = 99
+        val amount = 99
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Ninety-Nine dollars")
     }
@@ -57,9 +57,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheThreeDigitsLeastToWords() {
         //given
-        var amount = 100
+        val amount = 100
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Hundred dollars")
     }
@@ -67,9 +67,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheThreeDigitsMaxToWords() {
         //given
-        var amount = 999
+        val amount = 999
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -77,9 +77,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheFourDigitsLeastToWords() {
         //given
-        var amount = 1000
+        val amount = 1000
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Thousand dollars")
     }
@@ -87,9 +87,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheFiveDigitsMaxToWords() {
         //given
-        var amount = 9999
+        val amount = 9999
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -97,9 +97,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheFiveDigitsMaxtToWords() {
         //given
-        var amount = 9999
+        val amount = 9999
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -107,9 +107,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheSixDigitsLeastToWords() {
         //given
-        var amount = 100000
+        val amount = 100000
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Lakh dollars")
     }
@@ -117,9 +117,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheSixDigitsMaxWords() {
         //given
-        var amount = 999999
+        val amount = 999999
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Lakh  Ninety Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -127,9 +127,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheEightDigitsLeastWords() {
         //given
-        var amount = 10000000
+        val amount = 10000000
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Crore dollars")
     }
@@ -137,9 +137,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheEightDigitsMaxWords() {
         //given
-        var amount = 99999999
+        val amount = 99999999
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Crore  Ninety Nine Lakh  Ninety Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -148,10 +148,10 @@ class UserRegistrationFragmentTest {
     @Test
     fun testGetIntegerPart() {
         //given
-        var amount = "10.01"
+        val amount = "10.01"
         val indexOfDecimal: Int = amount.indexOf(".")
         //when
-        var result = userRegistrationFragment.getIntegerPart(amount, indexOfDecimal)
+        val result = userRegistrationFragment.getIntegerPart(amount, indexOfDecimal)
         //then
         Assert.assertEquals(10,result)
     }
@@ -159,10 +159,10 @@ class UserRegistrationFragmentTest {
     @Test
     fun testDecimalPart() {
         //given
-        var amount = "10.01"
+        val amount = "10.01"
         val indexOfDecimal: Int = amount.indexOf(".")
         //when
-        var result = userRegistrationFragment.getDecimalPart(amount, indexOfDecimal)
+        val result = userRegistrationFragment.getDecimalPart(amount, indexOfDecimal)
         //then
         Assert.assertEquals(1,result)
     }
@@ -170,9 +170,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheProcessingInputNumberOnlyWithIntegerPart() {
         //given
-        var amount = "143"
+        val amount = "143"
         //when
-        var result = userRegistrationFragment.processingInputNumber(amount).trim()
+        val result = userRegistrationFragment.processingInputNumber(amount).trim()
         //then
         Assert.assertEquals(result,"ONE HUNDRED AND FORTY-THREE DOLLARS")
     }
@@ -181,9 +181,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTextModifyLogicWithHyphen() {
         //given
-        var amount = 23
+        val amount = 23
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Twenty-Three dollars")
     }
@@ -191,9 +191,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTextModifyLogicWitOutHyphen() {
         //given
-        var amount = 20
+        val amount = 20
         //when
-        var result = userRegistrationFragment.toWords(amount).trim()
+        val result = userRegistrationFragment.toWords(amount).trim()
         //then
         Assert.assertEquals(result,"Twenty dollars")
 
@@ -203,9 +203,9 @@ class UserRegistrationFragmentTest {
     @Test
     fun testTheProcessingInputNumberOnlyWithIntegerAndDecimalPPart() {
         //given
-        var amount = "123.45"
+        val amount = "123.45"
         //when
-        var result = userRegistrationFragment.processingInputNumber(amount).trim()
+        val result = userRegistrationFragment.processingInputNumber(amount).trim()
         //then
         Assert.assertEquals(result,"ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS")
     }

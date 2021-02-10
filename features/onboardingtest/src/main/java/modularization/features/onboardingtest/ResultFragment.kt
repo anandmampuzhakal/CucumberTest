@@ -1,6 +1,5 @@
 package modularization.features.onboardingtest
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,7 +25,7 @@ class ResultFragment : Fragment() {
         view.findViewById<TextView>(R.id.numbers_in_words_value_textView).text =
             activity?.intent?.getStringExtra("numberToWords")
         view.findViewById<Button>(R.id.button_login_toapp).setOnClickListener {
-            activity!!.startActivity(Actions.openDashboardIntent(context!!, "fakeuser"))
+            activity!!.startActivity(Actions.openDashBoardIntent(context!!, "fakeuser"))
         }
         return view
     }

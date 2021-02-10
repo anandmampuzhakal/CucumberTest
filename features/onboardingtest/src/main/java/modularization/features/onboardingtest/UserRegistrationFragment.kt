@@ -15,9 +15,9 @@ import androidx.navigation.fragment.findNavController
 
 class UserRegistrationFragment : Fragment() {
 
-    lateinit var amountEditText: EditText
-    lateinit var userName: EditText
-    lateinit var numberToWords: String
+    private lateinit var amountEditText: EditText
+    private lateinit var userName: EditText
+    private lateinit var numberToWords: String
     private var integerPart: Int = 0
     private var decimalPart: Int = 0
     private lateinit var integerPartInWords: String
@@ -67,8 +67,8 @@ class UserRegistrationFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_user_registration, container, false)
 
-        amountEditText = view.findViewById<EditText>(R.id.amount)
-        userName = view.findViewById<EditText>(R.id.username)
+        amountEditText = view.findViewById(R.id.amount)
+        userName = view.findViewById(R.id.username)
         setTextWatcher()
         view.findViewById<Button>(R.id.button_register).setOnClickListener {
             if(userName.text.isNotEmpty() && amountEditText.text.toString().isNotEmpty()) {
@@ -168,7 +168,7 @@ class UserRegistrationFragment : Fragment() {
         var length = stringAmount.length
         var nLength: Int
         var ch: Char
-        var needToAddText: Boolean = false
+        var needToAddText = false
 
         while (length > 0) {
             ch = stringAmount[stringAmount.length - length]

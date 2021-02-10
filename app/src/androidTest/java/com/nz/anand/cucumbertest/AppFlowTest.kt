@@ -1,4 +1,4 @@
-package com.nz.anand.cucumbertest;
+package com.nz.anand.cucumbertest
 
 
 import androidx.test.espresso.Espresso.onView
