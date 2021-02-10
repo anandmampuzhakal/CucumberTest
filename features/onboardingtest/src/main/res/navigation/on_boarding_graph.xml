@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/on_boarding_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="modularization.features.onboardingtest.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_user_registration"
+            app:destination="@id/UserRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UserRegistrationFragment"
+        android:name="modularization.features.onboardingtest.UserRegistrationFragment"
+        android:label="UserRegistrationFragment"
+        tools:layout="@layout/fragment_user_registration">
+        <action
+            android:id="@+id/action_user_registration_to_result_Fragment"
+            app:destination="@id/avatarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/avatarFragment"
+        android:name="modularization.features.onboardingtest.ResultFragment"
+        android:label="AvatarFragment"
+        tools:layout="@layout/fragment_avatar" />
+</navigation>
