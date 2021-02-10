@@ -10,3 +10,10 @@ It shows how to split an app in logical vertical slices, how to handle in-featur
 
 ![Modularized architecture](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/modularized_architecture.png)
 
+Note that all code runs and executes, but the screens only contain data in xml preview. This means running the app provides a very "empty experience", but it also keeps the example simple and focused.
+
+# Features 
+
+## Login Welcome (Add-on)
+
+![Modularized architecture](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/welcome.png)
