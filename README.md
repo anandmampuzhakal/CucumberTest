@@ -26,5 +26,5 @@ Note that all code runs and executes, but the screens only contain data in xml p
 ![Welcome unit test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/unittestwekcome.png)
 
 ## Flow test for capture a person’s detail. 
-
+How to run the flow test for capture a person’s detail module.
 ![Welcome FlowTest test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/howtorunflow.png)
