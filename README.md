@@ -15,5 +15,8 @@ Note that all code runs and executes, but the screens only contain data in xml p
 # Features 
 
 ## Login Welcome (Add-on)
+![Login Welcome](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/welcome.png)
 
-![Modularized architecture](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/welcome.png)
+## Capture a person’s name and a number
+
+![Login Welcome](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/register.png)
