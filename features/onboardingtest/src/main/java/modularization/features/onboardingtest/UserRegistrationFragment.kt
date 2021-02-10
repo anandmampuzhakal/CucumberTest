@@ -77,7 +77,7 @@ class UserRegistrationFragment : Fragment() {
                 findNavController().navigate(R.id.action_user_registration_to_result_Fragment)
             }else{
                 Toast.makeText(activity,getString(R.string.inputs_error),Toast.LENGTH_SHORT).show()
-            }
+              }
         }
 
         return view
