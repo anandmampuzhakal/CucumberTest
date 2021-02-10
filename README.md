@@ -19,4 +19,12 @@ Note that all code runs and executes, but the screens only contain data in xml p
 
 ## Capture a person’s name and a number
 
-![Login Welcome](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/register.png)
+![Capture a person’s name and a number](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/register.png)
+
+## Unit test for capture a person’s detail. 
+
+![Welcome unit test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/unittestwekcome.png)
+
+## Flow test for capture a person’s detail. 
+
+![Welcome unit test](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/userregistartionflowtest.webm)
