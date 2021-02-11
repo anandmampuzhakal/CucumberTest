@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 androidExtensions {
     experimental = true
@@ -8,6 +9,5 @@ androidExtensions {
 
 dependencies {
     implementation Deps.androidx_core
-
     testImplementation Deps.test_lib_junit
 }

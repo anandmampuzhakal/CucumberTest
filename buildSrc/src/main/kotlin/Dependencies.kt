@@ -24,9 +24,11 @@ object Versions {
     //</editor-fold>
 
     // <editor-fold desc="tools">
-    const val gradle_android = "3.5.0"
+    const val gradle_android = "4.1.2"
     const val kotlin = "1.3.20"
     const val gradle_versions = "0.21.0"
+    const val timber_versions = "4.7.1"
+    const val lifecycle_versions = "2.2.0"
     // </editor-fold>
 
 }
@@ -48,6 +50,8 @@ object Deps {
     const val tools_gradle_android = "com.android.tools.build:gradle:${Versions.gradle_android}"
     const val tools_kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val tools_gradle_versions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradle_versions}"
+    const val timber_gradle_versions =  "com.jakewharton.timber:timber:${Versions.timber_versions}"
+    const val lifecycle_gradle_versions =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_versions}"
 
 }
 

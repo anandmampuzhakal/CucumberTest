@@ -1,3 +1,5 @@
+include ':libraries:network'
+include ':libraries:mvvmsupportlibrary'
 include ':app'
 include ':features:onboardingtest'
 include ':features:dashboard'
