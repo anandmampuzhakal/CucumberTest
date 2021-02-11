@@ -109,7 +109,7 @@ class UserRegistrationFragment : Fragment() {
                     }
                 }
                 decimalPart = getDecimalPart(amount, indexOfDecimal)
-                decimalPartInWords = toWords(decimalPart)
+                decimalPartInWords = convertNumberToWords(decimalPart)
             }
             else -> {
                 integerPart = getIntegerPart(amount, amount.length)
@@ -118,7 +118,7 @@ class UserRegistrationFragment : Fragment() {
 
         when {
             integerPart > 0 -> {
-                integerPartInWords = toWords(integerPart)
+                integerPartInWords = convertNumberToWords(integerPart)
                 numberInWords.append(integerPartInWords)
             }
         }
@@ -162,7 +162,7 @@ class UserRegistrationFragment : Fragment() {
         else 0
     }
 
-    fun toWords(amount: Int): String {
+    fun convertNumberToWords(amount: Int): String {
         val stringAmount = amount.toString()
         var numberInWords = ""
         var length = stringAmount.length
