@@ -1,13 +1,15 @@
 # CucumberTest
 
 The exercise is to develop a mobile application consisting of two or more screens that perform the following functions, also mainly focuses on how to architect/configure a multi-module application.
-MVVM pattern can adopt for each module also give the flexibility to the team can adopt any patterns according to the module behaviour. Here I am following the TDD approach which helps me to complete requirement fast.  
+Here I am following the TDD approach which helps me to complete requirement fast.  
 
-Recommendation for MVVM , SOLID principles
 
 1.	Capture a person’s name and a number.
 2.	Convert this number into words with a currency of dollars and cents.
 3.	Render this name and number (as words) on a new screen. 
+
+//Todo
+MVVM pattern can adopt for each module also give the flexibility to the team can adopt any patterns according to the module behaviour.
 
 It shows how to split an app in logical vertical slices, how to handle in-feature and across feature navigation (using navigation components), how each module can be tested and how to organize dependencies and build.gradle files. 
 

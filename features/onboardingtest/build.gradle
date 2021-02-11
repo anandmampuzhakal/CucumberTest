@@ -1,7 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
-
+android {
+    dataBinding {
+        enabled = true
+    }
+}
 dependencies {
     implementation project(':libraries:ui-components')
     implementation project(':libraries:actions')
