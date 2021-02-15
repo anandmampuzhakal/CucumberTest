@@ -18,12 +18,23 @@ It shows how to split an app in logical vertical slices, how to handle in-featur
 Note that all code runs and executes, but the screens only contain data in xml preview. This means running the app provides a very "empty experience", but it also keeps the example simple and focused.
 
 # Features 
+This Module is intent to provide a template with basic MVVM architecture framework with task 
+![MVVM pattern](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/mvvmpattern.png)
+
+Advantages:
+
+- Simple, easy to read
+- Use few libs, save time for gradle syncing
+- No dagger or any other DI lib
+
+## MVVM
+Usually, a viwemodel can only aware the destroy of its owner in onClear() method. But after making it implements LifecycleObserver and observing owner's lifecycle in ViewModelProvider.Factory. It can use onCreate() or other lifecycle event now.
+Check these codes in MVVMViewModelFactory.kt
 
 ## Login Welcome (Add-on)
 ![Login Welcome](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/welcome.png)
 
 ## Capture a person’s name and a number
-
 ![Capture a person’s name and a number](https://github.com/anandmampuzhakal/CucumberTest/blob/main/readme/register.png)
 
 ## Unit test for capture a person’s detail. 
