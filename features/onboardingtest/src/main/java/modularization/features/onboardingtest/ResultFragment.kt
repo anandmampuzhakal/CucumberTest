@@ -9,6 +9,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import modularization.libraries.actions.Actions
 
+/**
+ * @author Anand M Joseph (anandmampuzhakal@hotmail.com)
+ */
 
 class ResultFragment : Fragment() {
 
@@ -25,7 +28,7 @@ class ResultFragment : Fragment() {
         view.findViewById<TextView>(R.id.numbers_in_words_value_textView).text =
             activity?.intent?.getStringExtra("numberToWords")
         view.findViewById<Button>(R.id.button_login_toapp).setOnClickListener {
-            activity!!.startActivity(Actions.openDashBoardIntent(context!!, "fakeuser"))
+            activity?.startActivity(Actions.openDashBoardIntent(requireContext(), "fakeuser"))
         }
         return view
     }

@@ -5,7 +5,8 @@ object Config {
     const val compileSdk = 28
     const val targetSdk = 28
     val javaVersion = JavaVersion.VERSION_1_8
-    const val buildTools = "28.0.3"
+    const val buildTools = "29.0.2"
+    const val jvmTarget = "1.8"
 }
 
 object Versions {
@@ -15,6 +16,7 @@ object Versions {
     const val androidx_navigation = "2.0.0"
     const val androidx_constraintLayout = "1.1.3"
     const val material = "1.1.0-alpha04"
+    const val anko = "0.10.8"
     // </editor-fold>
 
     // <editor-fold desc="testing">
@@ -25,7 +27,7 @@ object Versions {
 
     // <editor-fold desc="tools">
     const val gradle_android = "4.1.2"
-    const val kotlin = "1.3.20"
+    const val kotlin = "1.4.20"
     const val gradle_versions = "0.21.0"
     const val timber_versions = "4.7.1"
     const val lifecycle_versions = "2.2.0"
@@ -52,6 +54,7 @@ object Deps {
     const val tools_gradle_versions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradle_versions}"
     const val timber_gradle_versions =  "com.jakewharton.timber:timber:${Versions.timber_versions}"
     const val lifecycle_gradle_versions =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_versions}"
+    const val jetbrains_anko = "org.jetbrains.anko:anko-commons:${Versions.anko}"
 
 }
 

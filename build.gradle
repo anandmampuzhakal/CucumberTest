@@ -13,7 +13,7 @@ buildscript {
         classpath Deps.tools_gradle_android
         classpath Deps.tools_kotlin
         classpath Deps.tools_gradle_versions
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.20"
         }
 }
 
@@ -41,8 +41,20 @@ subprojects {
                 }
 
                 compileOptions {
-                    sourceCompatibility Config.javaVersion
-                    targetCompatibility Config.javaVersion
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                // For Kotlin projects
+                kotlinOptions {
+                    jvmTarget = "1.8"
+                }
+
+                buildFeatures {
+                    dataBinding true
+                    viewBinding true
+                }
+                dexOptions {
+                    preDexLibraries = false
                 }
             }
         }

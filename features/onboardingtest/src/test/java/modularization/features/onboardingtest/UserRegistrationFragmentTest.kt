@@ -1,5 +1,6 @@
 package modularization.features.onboardingtest
 
+import modularization.features.onboardingtest.viewmodel.UserRegistrationViewModel
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -8,10 +9,10 @@ import org.junit.Test
  */
 class UserRegistrationFragmentTest {
 
-    private lateinit var userRegistrationFragment :UserRegistrationFragment
+   private lateinit var userRegistrationViewModel :UserRegistrationViewModel
       @Before
     fun setUp() {
-        userRegistrationFragment = UserRegistrationFragment()
+         userRegistrationViewModel = UserRegistrationViewModel()
     }
 
     @Test
@@ -19,7 +20,7 @@ class UserRegistrationFragmentTest {
         //given
          val amount = 1
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
          Assert.assertEquals(result,"One dollar")
     }
@@ -28,7 +29,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 3
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Three dollars")
     }
@@ -38,7 +39,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 11
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Eleven dollars")
     }
@@ -48,7 +49,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 99
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Ninety-Nine dollars")
     }
@@ -59,7 +60,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 100
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Hundred dollars")
     }
@@ -69,7 +70,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 999
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -79,7 +80,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 1000
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Thousand dollars")
     }
@@ -89,7 +90,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 9999
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -99,7 +100,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 9999
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -109,7 +110,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 100000
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Lakh dollars")
     }
@@ -119,7 +120,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 999999
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Lakh  Ninety Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -129,7 +130,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 10000000
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"One Crore dollars")
     }
@@ -139,7 +140,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 99999999
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Nine Crore  Ninety Nine Lakh  Ninety Nine Thousand Nine Hundred  AND Ninety-Nine dollars")
     }
@@ -151,7 +152,7 @@ class UserRegistrationFragmentTest {
         val amount = "10.01"
         val indexOfDecimal: Int = amount.indexOf(".")
         //when
-        val result = userRegistrationFragment.getIntegerPart(amount, indexOfDecimal)
+        val result = userRegistrationViewModel.getIntegerPart(amount, indexOfDecimal)
         //then
         Assert.assertEquals(10,result)
     }
@@ -162,7 +163,7 @@ class UserRegistrationFragmentTest {
         val amount = "10.01"
         val indexOfDecimal: Int = amount.indexOf(".")
         //when
-        val result = userRegistrationFragment.getDecimalPart(amount, indexOfDecimal)
+        val result = userRegistrationViewModel.getDecimalPart(amount, indexOfDecimal)
         //then
         Assert.assertEquals(1,result)
     }
@@ -172,7 +173,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = "143"
         //when
-        val result = userRegistrationFragment.processingInputNumber(amount).trim()
+        val result = userRegistrationViewModel.processingInputNumber(amount).trim()
         //then
         Assert.assertEquals(result,"ONE HUNDRED AND FORTY-THREE DOLLARS")
     }
@@ -183,7 +184,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 23
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Twenty-Three dollars")
     }
@@ -193,11 +194,9 @@ class UserRegistrationFragmentTest {
         //given
         val amount = 20
         //when
-        val result = userRegistrationFragment.convertNumberToWords(amount).trim()
+        val result = userRegistrationViewModel.convertNumberToWords(amount).trim()
         //then
         Assert.assertEquals(result,"Twenty dollars")
-
-        // "ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS"
     }
 
     @Test
@@ -205,7 +204,7 @@ class UserRegistrationFragmentTest {
         //given
         val amount = "123.45"
         //when
-        val result = userRegistrationFragment.processingInputNumber(amount).trim()
+        val result = userRegistrationViewModel.processingInputNumber(amount).trim()
         //then
         Assert.assertEquals(result,"ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS")
     }
